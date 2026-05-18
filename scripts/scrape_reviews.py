@@ -33,15 +33,15 @@ df = pd.DataFrame(all_reviews)
 
 print("Before cleaning:", df.shape)
 
-# Remove duplicates
+
 df.drop_duplicates(subset=['review'], inplace=True)
 
-# Remove missing values
+
 df.dropna(subset=['review', 'rating'], inplace=True)
 
 print("After cleaning:", df.shape)
 
-# Save cleaned dataset
+
 df.to_csv("data/raw/fintech_reviews.csv", index=False)
 
 print("Dataset saved successfully.")
