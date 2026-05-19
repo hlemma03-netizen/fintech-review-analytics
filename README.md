@@ -54,7 +54,7 @@ Reviews were classified into:
 - Negative
 - Neutral
 
-TextBlob was selected because it provieds lightweight sentiment anaysis suitable for limited computational resources.
+TextBlob was selected because it provides lightweight sentiment anaysis suitable for limited computational resources.
 
 TF-IDF Keyword extraction was used to identify recurring terms and themes from customer reviews.
 
@@ -63,4 +63,23 @@ The major themes identified incude:
 - Transaction Performance
 - OTP & Verification
 - UI & Design
-- Feature Requests
+- Feature Requests 
+
+## PostgreSQL Databbase Integration
+
+A PostgreSQL database named 'bank_reviews' was created to store cleaned to store cleaned and processed review data.
+
+Two relational tables were designed:
+
+### banks
+stores metadata about banking applications.
+
+### reviews
+Stores review text, sentiment analysis results, identified themes, and metadata.
+
+Python scripts using 'psycopg2' were used to insert reviews data into PostgreSQL.
+
+Verification SQL queries were excuted to confirm:
+- review counts per bank
+- average sentiment scores
+- abscence of null values in key columns

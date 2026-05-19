@@ -91,6 +91,9 @@ final_df = df[
     [
         "review_id",
         "review",
+        "bank",
+        "rating",
+        "date",
         "sentiment_label",
         "sentiment_score",
         "identified_theme"
